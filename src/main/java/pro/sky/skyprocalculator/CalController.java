@@ -1,12 +1,15 @@
 package pro.sky.skyprocalculator;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequestMapping
 public class CalController {
     private final CalService service;
+
 
     public CalController(CalService service) {
         this.service=service;
@@ -15,10 +18,7 @@ public class CalController {
     public String calculator() {
         return service.calculator();
     }
-    @GetMapping(path = "/calculator")
-    public String dataCalculator() {
-        return service.dataCalculator();
-    }
+
     @GetMapping (path= "/calculator/plus")
     public String plusCalculator (@RequestParam (value = "num1", required = false) Integer num1,
                                   @RequestParam (value = "num2", required = false) Integer num2)

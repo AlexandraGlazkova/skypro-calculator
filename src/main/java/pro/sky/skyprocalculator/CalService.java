@@ -9,9 +9,7 @@ public class CalService {
     public String calculator() {
         return "<b>Добро пожаловать в калькулятор</b>";
     }
-    public String dataCalculator() {
-        return "<b>Добро пожаловать в калькулятор</b>";
-    }
+
     public String plusCalculator (Integer num1, Integer num2) {
         if (num1 == null || num2 == null || num1==null && num2==null) {
             return "Ошибка!!! Введены не все данные!!!";
