@@ -10,7 +10,7 @@ public class CalService {
         return "<b>Добро пожаловать в калькулятор</b>";
     }
     public String dataCalculator() {
-        return "Приступим!";
+        return "<b>Добро пожаловать в калькулятор</b>";
     }
     public String plusCalculator (Integer num1, Integer num2) {
         if (num1 == null || num2 == null || num1==null && num2==null) {
